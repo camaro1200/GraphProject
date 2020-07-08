@@ -17,7 +17,6 @@ const int MAXN = 1e6;
 vector<vector<pair<int, int>>> v;
 vector<int> dist;
 vector<bool> visited;
-queue<int> q;
 int n, m;
 
 int findU()
@@ -65,7 +64,7 @@ void Dijekstra(int source)
         else
         {
            cout << "dikestra is complete" << endl;
-            return;
+           return;
         }
     }
 }
@@ -85,15 +84,17 @@ int main(int argc, const char * argv[]) {
         a--;
         b--;
         v[a].push_back({b, c});
-        v[b].push_back({a, c});
+        //v[b].push_back({a, c});
     }
        
-    Dijekstra(1);
+    Dijekstra(5);
     
     for(int i = 0; i < dist.size(); i++)
        {
-           cout << dist[i] << " ";
+           //cout << dist[i] << " ";
        }
+    
+    cout << dist[2];
     
     return 0;
 }
